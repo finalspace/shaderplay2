@@ -62,8 +62,8 @@ Shader "Shader Forge/CGwell2" {
                 o.uv0 = v.texcoord0;
                 o.vertexColor = v.vertexColor;
                 o.normalDir = UnityObjectToWorldNormal(v.normal);
-                float4 node_2562 = _Time + _TimeEditor;
-                float node_647_ang = node_2562.g;
+                float4 node_6203 = _Time + _TimeEditor;
+                float node_647_ang = node_6203.g;
                 float node_647_spd = 1.0;
                 float node_647_cos = cos(node_647_spd*node_647_ang);
                 float node_647_sin = sin(node_647_spd*node_647_ang);
@@ -82,8 +82,8 @@ Shader "Shader Forge/CGwell2" {
                 float3 normalDirection = i.normalDir;
 ////// Lighting:
 ////// Emissive:
-                float4 node_2562 = _Time + _TimeEditor;
-                float node_647_ang = node_2562.g;
+                float4 node_6203 = _Time + _TimeEditor;
+                float node_647_ang = node_6203.g;
                 float node_647_spd = 1.0;
                 float node_647_cos = cos(node_647_spd*node_647_ang);
                 float node_647_sin = sin(node_647_spd*node_647_ang);
@@ -94,7 +94,7 @@ Shader "Shader Forge/CGwell2" {
                 float4 _liuguang_var = tex2D(_liuguang,TRANSFORM_TEX(node_6436, _liuguang));
                 float3 node_7432 = (1.0*(_liuguang_var.rgb*i.vertexColor.rgb));
                 float4 _node_666_var = tex2D(_node_666,TRANSFORM_TEX(i.uv0, _node_666));
-                float2 node_3658 = (i.uv0+node_2562.g*float2(0.5,0.5));
+                float2 node_3658 = (i.uv0+node_6203.g*float2(0.5,0.5));
                 float4 _node_2526_var = tex2D(_node_2526,TRANSFORM_TEX(node_3658, _node_2526));
                 float2 node_8816 = ((dot((_liuguang_var.rgb*_node_666_var.r),float3(0.3,0.59,0.11))*_node_2526_var.r*_niuqu_qiangdu)+i.uv0);
                 float4 _wenli_var = tex2D(_wenli,TRANSFORM_TEX(node_8816, _wenli));
@@ -143,8 +143,8 @@ Shader "Shader Forge/CGwell2" {
                 VertexOutput o = (VertexOutput)0;
                 o.uv0 = v.texcoord0;
                 o.normalDir = UnityObjectToWorldNormal(v.normal);
-                float4 node_495 = _Time + _TimeEditor;
-                float node_647_ang = node_495.g;
+                float4 node_4526 = _Time + _TimeEditor;
+                float node_647_ang = node_4526.g;
                 float node_647_spd = 1.0;
                 float node_647_cos = cos(node_647_spd*node_647_ang);
                 float node_647_sin = sin(node_647_spd*node_647_ang);

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e8862c37c99b04bbcbf7c97a54ce001d
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _WaveTexture: {fileID: 2800000, guid: 32346db182d2947f6bffe75b4c1816b1, type: 3}
+  - _MainTexture: {fileID: 2800000, guid: 5798ded558355430c8a9b13ee12a847c, type: 3}
+  - _node_1035: {fileID: 2800000, guid: cd460ee4ac5c1e746b7a734cc7cc64dd, type: 3}
+  - _node_5936: {fileID: 2800000, guid: 32346db182d2947f6bffe75b4c1816b1, type: 3}
+  - _node_4402: {fileID: 2800000, guid: ffda96f6603934e678396c3adbb3d9fd, type: 3}
+  - _node_1013: {fileID: 2800000, guid: 169c5c2ddb5de4cbe9b2bd4e1a603767, type: 3}
+  - _MainTex: {fileID: 2800000, guid: 32346db182d2947f6bffe75b4c1816b1, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -84,8 +84,8 @@ Shader "Shader Forge/CGwell21" {
                 float3 normalDirection = i.normalDir;
 ////// Lighting:
 ////// Emissive:
-                float4 node_9532 = _Time + _TimeEditor;
-                float node_647_ang = node_9532.g;
+                float4 node_7503 = _Time + _TimeEditor;
+                float node_647_ang = node_7503.g;
                 float node_647_spd = 1.0;
                 float node_647_cos = cos(node_647_spd*node_647_ang);
                 float node_647_sin = sin(node_647_spd*node_647_ang);
@@ -95,7 +95,7 @@ Shader "Shader Forge/CGwell21" {
                 float2 node_6436 = saturate(lerp(node_647,float2(node_4398,node_4398),_WaveRange));
                 float4 _liuguang_var = tex2D(_liuguang,TRANSFORM_TEX(node_6436, _liuguang));
                 float4 _Noise_var = tex2D(_Noise,TRANSFORM_TEX(i.uv0, _Noise));
-                float2 node_3658 = (i.uv0+node_9532.g*float2(0.5,0.5));
+                float2 node_3658 = (i.uv0+node_7503.g*float2(0.5,0.5));
                 float4 _node_2526_var = tex2D(_node_2526,TRANSFORM_TEX(node_3658, _node_2526));
                 float2 node_8816 = (((_Noise_var.r*_Refraction)*_node_2526_var.r*_WaveWeight)+i.uv0);
                 float4 _wenli_var = tex2D(_wenli,TRANSFORM_TEX(node_8816, _wenli));
