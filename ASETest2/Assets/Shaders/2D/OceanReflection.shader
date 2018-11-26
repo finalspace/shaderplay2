@@ -88,10 +88,10 @@ Shader "Shader Forge/OceanReflection" {
                 float faceSign = ( facing >= 0 ? 1 : -1 );
 ////// Lighting:
 ////// Emissive:
-                float4 node_889 = _Time + _TimeEditor;
-                float2 node_595 = (i.uv0+node_889.g*float2(0.01,0.01));
+                float4 node_6205 = _Time + _TimeEditor;
+                float2 node_595 = (i.uv0+node_6205.g*float2(0.01,0.01));
                 float4 _WaveNoise_var = tex2D(_WaveNoise,TRANSFORM_TEX(node_595, _WaveNoise));
-                float2 node_3111 = (i.uv0+node_889.g*float2(0.05,0.02));
+                float2 node_3111 = (i.uv0+node_6205.g*float2(0.05,0.02));
                 float4 _WaveTex_var = tex2D(_WaveTex,TRANSFORM_TEX(node_3111, _WaveTex));
                 float3 node_3378 = float3((1.0 - ((_WaveNoise_var.r*0.5+0.0)+(_WaveTex_var.rgb.rg*_WavePower))),3.0);
                 float node_9884 = (_Distortion*0.2);
@@ -99,7 +99,7 @@ Shader "Shader Forge/OceanReflection" {
                 float4 _MainTex_var = tex2D(_MainTex,TRANSFORM_TEX(node_9829, _MainTex));
                 float node_603 = (_MainTex_var.a*_Color.a*i.vertexColor.a); // A
                 float4 _ShimmerTex_var = tex2D(_ShimmerTex,TRANSFORM_TEX(i.uv0, _ShimmerTex));
-                float2 node_6168 = ((i.uv0+node_889.g*float2(0,-0.1))*0.5);
+                float2 node_6168 = ((i.uv0+node_6205.g*float2(0,-0.1))*0.5);
                 float4 _ShimmerNoise_var = tex2D(_ShimmerNoise,TRANSFORM_TEX(node_6168, _ShimmerNoise));
                 float3 emissive = (((_MainTex_var.rgb*_Color.rgb*i.vertexColor.rgb)*node_603)+(_ReflectionColor.rgb*step(_ReflectionRange,dot(float3(0,0,1),normalize(lerp(float3(0,0,1),node_3378,_Reflection))))*_ReflectionPower)+(_ShimmerColor.rgb*_ShimmerTex_var.a*(_ShimmerNoise_var.r*_ShimmerNoisePower)));
                 float3 finalColor = emissive;
