@@ -3,10 +3,11 @@ guid: 7cbc1cd165a2743a9b1bcab94c12cfcc
 ShaderImporter:
   externalObjects: {}
   defaultTextures:
-  - _MainTex: {fileID: 2800000, guid: 6337f74ea4d0447fcabf466fbeb336d8, type: 3}
-  - _node_8526: {fileID: 2800000, guid: cd460ee4ac5c1e746b7a734cc7cc64dd, type: 3}
+  - _MainTex: {fileID: 2800000, guid: 19a732dca8f5d49dea8e83f72cc9c80c, type: 3}
+  - _WaveTex: {fileID: 2800000, guid: 6e6cba53deb4f4e41a81667b73a1ca42, type: 3}
   - _node_9969: {fileID: 2800000, guid: 6337f74ea4d0447fcabf466fbeb336d8, type: 3}
-  - _node_6028: {fileID: 2800000, guid: ebdd681c9a3b0492b843ae093d269de0, type: 3}
+  - _node_6028: {fileID: 2800000, guid: f97a0a5d2960642adbf798f4d687c679, type: 3}
+  - _WaveNoise: {fileID: 2800000, guid: 99496d4d2b28c424f86cf029cc40a6d1, type: 3}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

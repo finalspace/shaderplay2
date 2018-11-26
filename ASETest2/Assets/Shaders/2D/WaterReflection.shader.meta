@@ -3,7 +3,7 @@ guid: c222dfbf1687a405c81f634236d712a5
 ShaderImporter:
   externalObjects: {}
   defaultTextures:
-  - _MainTex: {fileID: 2800000, guid: 32346db182d2947f6bffe75b4c1816b1, type: 3}
+  - _MainTex: {fileID: 2800000, guid: d005da5f09c4046d98a95063dbc51b30, type: 3}
   - _node_6059: {fileID: 2800000, guid: 6e6cba53deb4f4e41a81667b73a1ca42, type: 3}
   - _node_4022: {fileID: 2800000, guid: 82324340e56b74a18a436642ac78d477, type: 3}
   userData: 
