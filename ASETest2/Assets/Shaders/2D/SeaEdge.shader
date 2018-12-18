@@ -82,10 +82,10 @@ Shader "Shader Forge/SeaEdge" {
                 float4 node_9013 = _Time + _TimeEditor;
                 float node_6758 = ((1.0*node_9013.g)+_Offset);
                 float node_3154 = (sin(node_6758)*0.5+0.5);
-                float4 node_2231 = _Time + _TimeEditor;
-                float2 node_839 = ((i.uv0+node_2231.g*float2(0.1,0.1))*1.0);
+                float4 node_3091 = _Time + _TimeEditor;
+                float2 node_839 = ((i.uv0+node_3091.g*float2(0.1,0.1))*1.0);
                 float4 _WaveNoise_var = tex2D(_WaveNoise,TRANSFORM_TEX(node_839, _WaveNoise));
-                float2 node_9892 = ((i.uv0+node_2231.g*float2(-0.1,-0.12))*1.0);
+                float2 node_9892 = ((i.uv0+node_3091.g*float2(-0.1,-0.12))*1.0);
                 float4 _WaveTex_var = tex2D(_WaveTex,TRANSFORM_TEX(node_9892, _WaveTex));
                 float2 node_8441 = (lerp(i.uv0,(i.uv0+((_NoisePower*(_WaveNoise_var.r*0.4+-0.2))+(_WaveTex_var.g*0.2+0.0))),_NoiseMovement)+(pow(node_3154,1.5)*0.15+-0.1)*float2(0,1));
                 float4 node_1524 = tex2D(_node_6028,TRANSFORM_TEX(node_8441, _node_6028));

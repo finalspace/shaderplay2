@@ -66,8 +66,8 @@ Shader "Shader Forge/Caustics2D" {
                 float isFrontFace = ( facing >= 0 ? 1 : 0 );
                 float faceSign = ( facing >= 0 ? 1 : -1 );
                 float4 _MainTex_var = tex2D(_MainTex,TRANSFORM_TEX(i.uv0, _MainTex));
-                float4 node_8951 = _Time + _TimeEditor;
-                float2 node_5008 = (i.uv0+node_8951.g*float2(0.02,0.02));
+                float4 node_2544 = _Time + _TimeEditor;
+                float2 node_5008 = (i.uv0+node_2544.g*float2(0.02,0.02));
                 float4 _NoiseTexture_var = tex2D(_NoiseTexture,TRANSFORM_TEX(node_5008, _NoiseTexture));
                 float2 node_2848 = ((_NoiseTexture_var.g*0.1+0.0)+(i.uv0*0.5));
                 float4 _node_6629_var = tex2D(_node_6629,TRANSFORM_TEX(node_2848, _node_6629));
@@ -130,8 +130,8 @@ Shader "Shader Forge/Caustics2D" {
                 float isFrontFace = ( facing >= 0 ? 1 : 0 );
                 float faceSign = ( facing >= 0 ? 1 : -1 );
                 float4 _MainTex_var = tex2D(_MainTex,TRANSFORM_TEX(i.uv0, _MainTex));
-                float4 node_167 = _Time + _TimeEditor;
-                float2 node_5008 = (i.uv0+node_167.g*float2(0.02,0.02));
+                float4 node_6415 = _Time + _TimeEditor;
+                float2 node_5008 = (i.uv0+node_6415.g*float2(0.02,0.02));
                 float4 _NoiseTexture_var = tex2D(_NoiseTexture,TRANSFORM_TEX(node_5008, _NoiseTexture));
                 float2 node_2848 = ((_NoiseTexture_var.g*0.1+0.0)+(i.uv0*0.5));
                 float4 _node_6629_var = tex2D(_node_6629,TRANSFORM_TEX(node_2848, _node_6629));

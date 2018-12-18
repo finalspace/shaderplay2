@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d6a67cb5872594e45838f848d2623293
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _MainTex: {fileID: 2800000, guid: 19a732dca8f5d49dea8e83f72cc9c80c, type: 3}
+  - _WaveNoise2: {fileID: 2800000, guid: 9c2558f3e6bb44048afeea0dda010a13, type: 3}
+  - _node_9969: {fileID: 2800000, guid: 6337f74ea4d0447fcabf466fbeb336d8, type: 3}
+  - _node_6028: {fileID: 2800000, guid: 37051b9f43c694bc5af4340296fdaa1c, type: 3}
+  - _WaveNoise1: {fileID: 2800000, guid: 0822be61d4823444e959e7b335727c7c, type: 3}
+  - _FoamTex: {fileID: 2800000, guid: d01457b88b1c5174ea4235d140b5fab8, type: 3}
+  - _Refraction: {fileID: 2800000, guid: 61c0b9c0523734e0e91bc6043c72a490, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
