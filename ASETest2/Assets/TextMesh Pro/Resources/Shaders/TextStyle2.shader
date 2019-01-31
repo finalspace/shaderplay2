@@ -19,7 +19,7 @@ Properties {
     _UnderlayColor      ("Border Color", Color) = (0,0,0,.5)
     _UnderlayOffsetX    ("Border OffsetX", Range(-5,5)) = 0
     _UnderlayOffsetY    ("Border OffsetY", Range(-5,5)) = 0
-    _UnderlayDilate     ("Border Dilate", Range(-1,1)) = 0
+    _UnderlayDilate     ("Border Dilate", Range(-1,2)) = 0
     _UnderlaySoftness   ("Border Softness", Range(0,1)) = 0
 
     _WeightNormal       ("Weight Normal", float) = 0
@@ -107,12 +107,13 @@ SubShader {
             fixed4  faceColor       : COLOR;
             fixed4  outlineColor    : COLOR1;
             fixed4  outlineColor2   : COLOR2;
+            fixed4  outlineEdgeParam: COLOR3;
             float4  texcoord0       : TEXCOORD0;            // Texture UV, Mask UV
             half4   param           : TEXCOORD1;            // Scale(x), BiasIn(y), BiasOut(z), Bias(w)
             half4   mask            : TEXCOORD2;            // Position in clip space(xy), Softness(zw)
         #if (UNDERLAY_ON | UNDERLAY_INNER)
             float4  texcoord1       : TEXCOORD3;            // Texture UV, alpha, reserved
-            half2   underlayParam   : TEXCOORD4;            // Scale(x), Bias(y)
+            half4   underlayParam   : TEXCOORD4;            // Scale(x), Bias(y)
         #endif
 
         };
@@ -207,7 +208,7 @@ SubShader {
             scale /= 1 + (_OutlineSoftness * _ScaleRatioA * scale);
             float bias = (0.5 - weight) * scale - 0.5;
             float outline = _OutlineWidth * _ScaleRatioA * 0.5 * scale;
-            //outline += sin(_Time.y * 3 + vPosition.x * 100) * 0.1 * scale;
+            //outline += sin(_Time.y * 3 + vPosition.x * 5) * 0.1 * scale;
 
             float opacity = input.color.a;
         #if (UNDERLAY_ON | UNDERLAY_INNER)
@@ -223,7 +224,11 @@ SubShader {
             outlineColor.rgb *= outlineColor.a;
             outlineColor = lerp(faceColor, outlineColor, sqrt(min(1.0, (outline * 2))));
 
-            fixed4 outlineColor2 = _OutlineColor;
+            fixed4 outlineColor2 = _OutlineColor2;
+
+            float outlineX = (outline * _ScaleRatioA);
+            float outlineY = (outline * _ScaleRatioA);
+            float2 outLineEdge = float2(outlineX, outlineY);
 
         #if (UNDERLAY_ON | UNDERLAY_INNER)
             layerScale /= 1 + ((_UnderlaySoftness * _ScaleRatioC) * layerScale);
@@ -245,12 +250,14 @@ SubShader {
                 faceColor,
                 outlineColor,
                 outlineColor2,
+                float4(input.texcoord0 + outLineEdge, 0, 0),
                 float4(input.texcoord0.x, input.texcoord0.y, maskUV.x, maskUV.y),
-                half4(scale, bias - outline, bias, bias),
+                half4(scale, bias - outline, bias + outline, bias),
                 half4(vert.xy * 2 - clampedRect.xy - clampedRect.zw, 0.25 / (0.25 * half2(_MaskSoftnessX, _MaskSoftnessY) + pixelSize.xy)),
             #if (UNDERLAY_ON | UNDERLAY_INNER)
                 float4(input.texcoord0 + layerOffset, input.color.a, 0),
-                half2(layerScale, layerBias),
+                //float4(input.texcoord0 + layerOffset, input.texcoord0 + outLineEdge),
+                half4(layerScale, layerBias, layerBias - outline, layerBias + outline),
             #endif
 
             };
@@ -258,20 +265,52 @@ SubShader {
             return output;
         }
 
+     
+
         fixed4 pixColor(pixel_t input, float2 offset)
         {
             half d = tex2D(_MainTex, input.texcoord0.xy + offset).a * input.param.x;
             half4 c = input.faceColor * saturate(d - input.param.w);
 
+            half outlineD = tex2D(_MainTex, input.outlineEdgeParam.xy + offset).a * input.param.x;
+            half4 underlayColor; 
+            /*
         #ifdef OUTLINE_ON
-            c = lerp(input.outlineColor, input.faceColor, saturate(d - input.param.z));
-            c *= saturate(d - input.param.y);
+            outlineC = lerp(input.outlineColor, input.faceColor, saturate(d - input.param.z));
+            //outlineC = lerp(input.outlineColor, fixed4(0,0,0,0), saturate(d - input.param.z));
+            outlineC *= saturate(d - input.param.z);
+
+            c  = outlineC;
+            //c += outlineC * (1 - c.a);
         #endif
+        */
+
+        #ifdef OUTLINE_ON
+            //c = lerp(input.outlineColor, input.faceColor, saturate(d - input.param.z));
+            //c *= saturate(d - input.param.y);
+
+            half4 outlineC = lerp(input.outlineColor, input.faceColor, saturate(d - input.param.z));
+            outlineC *= saturate(d - input.param.y);
+
+            c = outlineC;
+        #endif
+         
+        
 
         #if UNDERLAY_ON
-            d = tex2D(_MainTex, input.texcoord1.xy + offset).a * input.underlayParam.x;
-            c += float4(_UnderlayColor.rgb * _UnderlayColor.a, _UnderlayColor.a) * saturate(d - input.underlayParam.y) * (1 - c.a);
+            half d_underlay = tex2D(_MainTex, input.texcoord1.xy + offset).a * input.underlayParam.x;
+            underlayColor = float4(_UnderlayColor.rgb * _UnderlayColor.a, _UnderlayColor.a) * saturate(d_underlay - input.underlayParam.y) * (1 - c.a);
+
+            half4 outlineUnderlay = lerp(input.outlineColor2, _UnderlayColor, saturate(d_underlay - input.underlayParam.w)) * (1 - c.a);
+            outlineUnderlay *= saturate(d_underlay - input.underlayParam.z);
+
+            c += outlineUnderlay;
+
+            //c += underlayColor;
+            //c += float4(_UnderlayColor.rgb * _UnderlayColor.a, _UnderlayColor.a) * saturate(d - input.underlayParam.y);
         #endif
+
+       
 
         #if UNDERLAY_INNER
             half sd = saturate(d - input.param.z);
@@ -330,7 +369,7 @@ SubShader {
                 if (size == 0)
                     return new_c;
 
-
+                    /*
                 int up = 0;
                 for (int d = 0; d < 100; d++)
                 {
@@ -352,6 +391,7 @@ SubShader {
                         break;
                     }
                 }
+                */
 
                 //if(up ==1 && down ==1)
                 //return new_c;
@@ -391,7 +431,6 @@ SubShader {
                 return new_c;
             }
 
-
         // PIXEL SHADER
         fixed4 PixShader(pixel_t input) : SV_Target
         {      
@@ -402,18 +441,20 @@ SubShader {
             fixed4 cc = OutlinePass(c, input, _OutlineWidth2);
 
             //half4 newc = OutlinePass(c, input.texcoord0, 1);
-            return cc;
-        }
 
-        /*
-        if(pixelUp.a * pixelDown.a * pixelLeft.a * pixelRight.a == 0)
-        {
-            c.rgba = fixed4(1, 1, 1, 1) * _OutlineColor;
+            //if(pixelUp.a * pixelDown.a * pixelLeft.a * pixelRight.a == 0)
+            //{
+            //    c.rgba = fixed4(1, 1, 1, 1) * _OutlineColor;
+            //}
+
+            return c;
         }
-        */
         ENDCG
+
     }
+
 }
 
 //CustomEditor "TMPro.EditorUtilities.TMP_SDFShaderGUI"
+CustomEditor "TMPShaderGUIOverride"
 }

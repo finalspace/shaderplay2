@@ -123,25 +123,25 @@ Shader "Shader Forge/LakeShader" {
                 #endif
                 i.screenPos = float4( i.screenPos.xy / i.screenPos.w, 0, 0 );
                 i.screenPos.y *= _ProjectionParams.x;
-                float4 node_4359 = _Time + _TimeEditor;
-                float2 node_2685 = (i.uv0+node_4359.g*float2(0.05,0.05));
+                float4 node_3111 = _Time + _TimeEditor;
+                float2 node_2685 = (i.uv0+node_3111.g*float2(0.05,0.05));
                 float4 _Wave_var = tex2D(_Wave,TRANSFORM_TEX(node_2685, _Wave));
                 float3 node_117 = ((_Wave_var.rgb*0.1+0.0)*_WavePower);
                 float3 node_7307 = (node_117*_DistortionWave*10.0);
-                float2 node_528 = (i.uv0+node_4359.g*float2(0.02,0.02));
+                float2 node_528 = (i.uv0+node_3111.g*float2(0.02,0.02));
                 float4 _RefractionNoiseTex_var = tex2D(_RefractionNoiseTex,TRANSFORM_TEX(node_528, _RefractionNoiseTex));
                 float2 sceneUVs = float2(1,grabSign)*i.screenPos.xy*0.5+0.5 + ((node_7307+_RefractionNoiseTex_var.rgb).rg*(_Distortion*0.1));
                 float4 sceneColor = tex2D(_GrabTexture, sceneUVs);
 ////// Lighting:
 ////// Emissive:
-                float2 node_6120 = (i.uv0+node_4359.g*float2(-0.05,-0.05));
+                float2 node_6120 = (i.uv0+node_3111.g*float2(-0.05,-0.05));
                 float4 _SurfaceNoiseTex_var = tex2D(_SurfaceNoiseTex,TRANSFORM_TEX(node_6120, _SurfaceNoiseTex));
                 float3 node_3103 = (float3((i.uv0*1.0),0.0)+((_SurfaceNoiseTex_var.r*0.1+0.0)*_SurfaceNoisePower)+node_117);
                 float4 _Shimmer_var = tex2D(_Shimmer,TRANSFORM_TEX(node_3103, _Shimmer));
                 float4 _MainTex_var = tex2D(_MainTex,TRANSFORM_TEX(i.uv0, _MainTex));
                 float node_5586 = (_MainTex_var.r*2.5+-0.5);
                 float3 node_8209 = float3(0,0,1);
-                float2 node_8310 = (i.uv0+node_4359.g*float2(0.01,0.01));
+                float2 node_8310 = (i.uv0+node_3111.g*float2(0.01,0.01));
                 float4 _ReflectionNoiseTex_var = tex2D(_ReflectionNoiseTex,TRANSFORM_TEX(node_8310, _ReflectionNoiseTex));
                 float node_1044 = dot(node_8209,lerp(node_8209,normalize(float3((1.0 - (node_7307+(_ReflectionNoiseTex_var.r*0.2+0.0)).rg),1.0)),_Reflection));
                 float node_7499_if_leA = step(_ReflectionRange,node_1044);
