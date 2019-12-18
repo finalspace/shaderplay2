@@ -1,0 +1,69 @@
+
+ddt_map_ch11_baby_seal.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 4, 31
+  size: 332, 218
+  orig: 332, 218
+  offset: 0, 0
+  index: -1
+flipper
+  rotate: false
+  xy: 340, 113
+  size: 64, 29
+  orig: 64, 29
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 340, 146
+  size: 102, 103
+  orig: 102, 103
+  offset: 0, 0
+  index: -1
+lash1
+  rotate: false
+  xy: 446, 183
+  size: 24, 24
+  orig: 24, 24
+  offset: 0, 0
+  index: -1
+lash2
+  rotate: false
+  xy: 4, 4
+  size: 57, 23
+  orig: 57, 23
+  offset: 0, 0
+  index: -1
+lid1
+  rotate: true
+  xy: 65, 7
+  size: 20, 29
+  orig: 20, 29
+  offset: 0, 0
+  index: -1
+lid2
+  rotate: false
+  xy: 340, 77
+  size: 45, 32
+  orig: 45, 32
+  offset: 0, 0
+  index: -1
+pupil1
+  rotate: true
+  xy: 408, 122
+  size: 20, 33
+  orig: 20, 33
+  offset: 0, 0
+  index: -1
+pupil2
+  rotate: false
+  xy: 446, 211
+  size: 40, 38
+  orig: 40, 38
+  offset: 0, 0
+  index: -1

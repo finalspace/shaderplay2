@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 78fb712daa7b040debb68566a99d3a6d
+ScriptedImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: e4afa64c3b71347c2a0d2fbf0623f1dd, type: 3}
+  importPixelsPerUnit: 100
+  reduceBorderArtifacts: 1
+  reduceBorderArtifactsPadding: 2
+  generateMipmaps: 0
+  atlasTextureFormat: 3
+  npotTrimAtlas: 1
+  spritePadding: 2
+  worldShaderPath: Sprites/Default
+  uIShaderPath: UI/Default

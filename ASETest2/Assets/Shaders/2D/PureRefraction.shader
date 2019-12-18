@@ -77,8 +77,8 @@ Shader "Shader Forge/PureRefraction" {
                 #endif
                 i.screenPos = float4( i.screenPos.xy / i.screenPos.w, 0, 0 );
                 i.screenPos.y *= _ProjectionParams.x;
-                float4 node_3302 = _Time + _TimeEditor;
-                float2 node_2924 = (i.uv0+node_3302.g*float2(0.1,0.1));
+                float4 node_2773 = _Time + _TimeEditor;
+                float2 node_2924 = (i.uv0+node_2773.g*float2(0.1,0.1));
                 float4 _NoiseTexture_var = tex2D(_NoiseTexture,TRANSFORM_TEX(node_2924, _NoiseTexture));
                 float2 sceneUVs = float2(1,grabSign)*i.screenPos.xy*0.5+0.5 + ((_NoiseTexture_var.rgb*2.0+-1.0).rg*_FractionPower*0.05);
                 float4 sceneColor = tex2D(_GrabTexture, sceneUVs);

@@ -1,0 +1,41 @@
+
+ddt_map_ch11_seal_sleeping.png
+size: 2048,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 4, 115
+  size: 667, 322
+  orig: 667, 322
+  offset: 0, 0
+  index: -1
+flipper1
+  rotate: false
+  xy: 121, 36
+  size: 92, 75
+  orig: 92, 75
+  offset: 0, 0
+  index: -1
+flipper2
+  rotate: false
+  xy: 1367, 347
+  size: 118, 90
+  orig: 118, 90
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 675, 183
+  size: 688, 254
+  orig: 688, 254
+  offset: 0, 0
+  index: -1
+snotBubble
+  rotate: false
+  xy: 4, 4
+  size: 113, 107
+  orig: 113, 107
+  offset: 0, 0
+  index: -1

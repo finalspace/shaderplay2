@@ -55,8 +55,8 @@ Shader "Shader Forge/caustics" {
             float4 frag(VertexOutput i) : COLOR {
 ////// Lighting:
 ////// Emissive:
-                float4 node_588 = _Time + _TimeEditor;
-                float2 node_9757 = (i.uv0+node_588.g*float2(0.05,0));
+                float4 node_2260 = _Time + _TimeEditor;
+                float2 node_9757 = (i.uv0+node_2260.g*float2(0.05,0));
                 float4 _node_301_var = tex2D(_node_301,TRANSFORM_TEX(node_9757, _node_301));
                 float2 node_7293 = ((_node_301_var.g*0.2+-0.1)+(i.uv0*_UV));
                 float4 node_2912 = tex2D(_Wave,TRANSFORM_TEX(node_7293, _Wave));

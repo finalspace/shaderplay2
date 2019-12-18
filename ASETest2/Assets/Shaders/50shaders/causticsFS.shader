@@ -67,8 +67,8 @@ Shader "Shader Forge/causticsFS" {
 ////// Emissive:
                 float3 emissive = _MainColor.rgb;
                 float3 finalColor = emissive;
-                float4 node_957 = _Time + _TimeEditor;
-                float2 node_9757 = (i.uv0+node_957.g*float2(0.2,0));
+                float4 node_4673 = _Time + _TimeEditor;
+                float2 node_9757 = (i.uv0+node_4673.g*float2(0.2,0));
                 float4 _NoiseTexture_var = tex2D(_NoiseTexture,TRANSFORM_TEX(node_9757, _NoiseTexture));
                 float2 node_7293 = ((_DistortLevel*(_NoiseTexture_var.g*0.2+-0.1))+(i.uv0*_UV));
                 float4 node_2912 = tex2D(_Wave,TRANSFORM_TEX(node_7293, _Wave));

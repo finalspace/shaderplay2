@@ -71,10 +71,10 @@ Shader "Shader Forge/OceanWaveReflectionFixed" {
                 float faceSign = ( facing >= 0 ? 1 : -1 );
 ////// Lighting:
 ////// Emissive:
-                float4 node_6144 = _Time + _TimeEditor;
-                float2 node_1578 = ((i.uv0+node_6144.g*float2(0.01,-0.01))*1.0);
+                float4 node_3247 = _Time + _TimeEditor;
+                float2 node_1578 = ((i.uv0+node_3247.g*float2(0.01,-0.01))*1.0);
                 float4 _node_9113_var = tex2D(_node_9113,TRANSFORM_TEX(node_1578, _node_9113));
-                float2 node_7713 = ((i.uv0+node_6144.g*float2(-0.01,0.01))*1.0);
+                float2 node_7713 = ((i.uv0+node_3247.g*float2(-0.01,0.01))*1.0);
                 float4 _NoiseTex_var = tex2D(_NoiseTex,TRANSFORM_TEX(node_7713, _NoiseTex));
                 float node_7536 = (((_node_9113_var.r+_NoiseTex_var.r)*2.0+-1.0)*_NoisePower);
                 float4 _MainTex_var = tex2D(_MainTex,TRANSFORM_TEX(i.uv0, _MainTex));

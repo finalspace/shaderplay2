@@ -1,0 +1,97 @@
+
+ddt_map_ch11_sitting_seal.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 4, 94
+  size: 538, 395
+  orig: 538, 395
+  offset: 0, 0
+  index: -1
+eye1
+  rotate: false
+  xy: 187, 63
+  size: 17, 27
+  orig: 17, 27
+  offset: 0, 0
+  index: -1
+eye2
+  rotate: false
+  xy: 787, 459
+  size: 26, 30
+  orig: 26, 30
+  offset: 0, 0
+  index: -1
+flipper1
+  rotate: false
+  xy: 727, 414
+  size: 56, 75
+  orig: 56, 75
+  offset: 0, 0
+  index: -1
+flipper2
+  rotate: false
+  xy: 4, 4
+  size: 117, 86
+  orig: 117, 86
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 546, 357
+  size: 177, 132
+  orig: 177, 132
+  offset: 0, 0
+  index: -1
+lash1
+  rotate: false
+  xy: 125, 25
+  size: 25, 24
+  orig: 25, 24
+  offset: 0, 0
+  index: -1
+lash2
+  rotate: false
+  xy: 643, 330
+  size: 44, 23
+  orig: 44, 23
+  offset: 0, 0
+  index: -1
+lid1
+  rotate: false
+  xy: 727, 376
+  size: 23, 34
+  orig: 23, 34
+  offset: 0, 0
+  index: -1
+lid2
+  rotate: false
+  xy: 546, 263
+  size: 41, 30
+  orig: 41, 30
+  offset: 0, 0
+  index: -1
+mouth
+  rotate: false
+  xy: 125, 53
+  size: 58, 37
+  orig: 58, 37
+  offset: 0, 0
+  index: -1
+nose
+  rotate: false
+  xy: 546, 239
+  size: 23, 20
+  orig: 23, 20
+  offset: 0, 0
+  index: -1
+sclera
+  rotate: false
+  xy: 546, 297
+  size: 93, 56
+  orig: 93, 56
+  offset: 0, 0
+  index: -1

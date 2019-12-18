@@ -1,0 +1,13 @@
+
+ddt_map_c11_sardine.png
+size: 128,32
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ddt_map_c11_sardine
+  rotate: true
+  xy: 4, 4
+  size: 15, 60
+  orig: 15, 60
+  offset: 0, 0
+  index: -1

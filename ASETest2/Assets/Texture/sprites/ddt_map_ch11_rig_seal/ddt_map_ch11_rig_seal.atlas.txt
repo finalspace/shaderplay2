@@ -1,0 +1,104 @@
+
+ddt_map_ch11_rig_seal.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 4, 159
+  size: 531, 343
+  orig: 531, 343
+  offset: 0, 0
+  index: -1
+ears
+  rotate: false
+  xy: 159, 106
+  size: 127, 49
+  orig: 127, 49
+  offset: 0, 0
+  index: -1
+eye1
+  rotate: false
+  xy: 759, 477
+  size: 14, 25
+  orig: 14, 25
+  offset: 0, 0
+  index: -1
+eye2
+  rotate: false
+  xy: 539, 343
+  size: 26, 30
+  orig: 26, 30
+  offset: 0, 0
+  index: -1
+flipper
+  rotate: false
+  xy: 539, 436
+  size: 154, 66
+  orig: 154, 66
+  offset: 0, 0
+  index: -1
+flipperback
+  rotate: false
+  xy: 159, 33
+  size: 84, 69
+  orig: 84, 69
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 4, 31
+  size: 151, 124
+  orig: 151, 124
+  offset: 0, 0
+  index: -1
+lash1
+  rotate: false
+  xy: 247, 78
+  size: 25, 24
+  orig: 25, 24
+  offset: 0, 0
+  index: -1
+lash2
+  rotate: false
+  xy: 4, 4
+  size: 44, 23
+  orig: 44, 23
+  offset: 0, 0
+  index: -1
+lid1
+  rotate: false
+  xy: 645, 401
+  size: 20, 31
+  orig: 20, 31
+  offset: 0, 0
+  index: -1
+lid2
+  rotate: false
+  xy: 290, 125
+  size: 41, 30
+  orig: 41, 30
+  offset: 0, 0
+  index: -1
+mouth
+  rotate: false
+  xy: 697, 465
+  size: 58, 37
+  orig: 58, 37
+  offset: 0, 0
+  index: -1
+nose
+  rotate: false
+  xy: 697, 441
+  size: 23, 20
+  orig: 23, 20
+  offset: 0, 0
+  index: -1
+sclera
+  rotate: false
+  xy: 539, 377
+  size: 102, 55
+  orig: 102, 55
+  offset: 0, 0
+  index: -1

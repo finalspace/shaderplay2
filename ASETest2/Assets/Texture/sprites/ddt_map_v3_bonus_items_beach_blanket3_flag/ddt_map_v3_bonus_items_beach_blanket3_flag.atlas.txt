@@ -1,0 +1,13 @@
+
+ddt_map_v3_bonus_items_beach_blanket3_flag.png
+size: 128,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ddt_map_v3_bonus_items_beach_blanket3_flag
+  rotate: false
+  xy: 4, 4
+  size: 72, 51
+  orig: 72, 51
+  offset: 0, 0
+  index: -1

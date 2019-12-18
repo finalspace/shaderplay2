@@ -80,10 +80,10 @@ Shader "Shader Forge/WaterReflection" {
                 float faceSign = ( facing >= 0 ? 1 : -1 );
 ////// Lighting:
 ////// Emissive:
-                float4 node_4707 = _Time + _TimeEditor;
-                float2 node_595 = (i.uv0+node_4707.g*float2(0.01,0.01));
+                float4 node_2875 = _Time + _TimeEditor;
+                float2 node_595 = (i.uv0+node_2875.g*float2(0.01,0.01));
                 float4 _node_4022_var = tex2D(_node_4022,TRANSFORM_TEX(node_595, _node_4022));
-                float2 node_3111 = (i.uv0+node_4707.g*float2(0.05,0.02));
+                float2 node_3111 = (i.uv0+node_2875.g*float2(0.05,0.02));
                 float4 _node_6059_var = tex2D(_node_6059,TRANSFORM_TEX(node_3111, _node_6059));
                 float3 node_3378 = float3((1.0 - ((_node_4022_var.r*0.5+0.0)+(_node_6059_var.rgb.rg*_WavePower))),3.0);
                 float node_9884 = (_Distortion*0.2);

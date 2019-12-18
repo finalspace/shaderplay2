@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: a0385867a58a34d409cba6301c95e1bb
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _MainTex: {fileID: 2800000, guid: 6337f74ea4d0447fcabf466fbeb336d8, type: 3}
+  - _Mask: {fileID: 2800000, guid: f864feb7dd8b3214ebf22602cf36c378, type: 3}
+  - _RollTexture: {fileID: 2800000, guid: ce77bc6ade2d94cd0b315e73bdb3f5e3, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

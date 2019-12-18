@@ -110,8 +110,8 @@ Shader "Shader Forge/WaterPool" {
                 i.screenPos.y *= _ProjectionParams.x;
                 float3x3 tangentTransform = float3x3( i.tangentDir, i.bitangentDir, i.normalDir);
                 float3 viewDirection = normalize(_WorldSpaceCameraPos.xyz - i.posWorld.xyz);
-                float4 node_8628 = _Time + _TimeEditor;
-                float2 node_6483 = (i.uv0+node_8628.g*float2(0.05,0));
+                float4 node_4950 = _Time + _TimeEditor;
+                float2 node_6483 = (i.uv0+node_4950.g*float2(0.05,0));
                 float3 _node_8547_var = UnpackNormal(tex2D(_node_8547,TRANSFORM_TEX(node_6483, _node_8547)));
                 float3 normalLocal = normalize(lerp(float3(0,0,1),_node_8547_var.rgb,_Reflection));
                 float3 normalDirection = normalize(mul( normalLocal, tangentTransform )); // Perturbed normals
@@ -310,8 +310,8 @@ Shader "Shader Forge/WaterPool" {
                 i.screenPos.y *= _ProjectionParams.x;
                 float3x3 tangentTransform = float3x3( i.tangentDir, i.bitangentDir, i.normalDir);
                 float3 viewDirection = normalize(_WorldSpaceCameraPos.xyz - i.posWorld.xyz);
-                float4 node_3370 = _Time + _TimeEditor;
-                float2 node_6483 = (i.uv0+node_3370.g*float2(0.05,0));
+                float4 node_8569 = _Time + _TimeEditor;
+                float2 node_6483 = (i.uv0+node_8569.g*float2(0.05,0));
                 float3 _node_8547_var = UnpackNormal(tex2D(_node_8547,TRANSFORM_TEX(node_6483, _node_8547)));
                 float3 normalLocal = normalize(lerp(float3(0,0,1),_node_8547_var.rgb,_Reflection));
                 float3 normalDirection = normalize(mul( normalLocal, tangentTransform )); // Perturbed normals

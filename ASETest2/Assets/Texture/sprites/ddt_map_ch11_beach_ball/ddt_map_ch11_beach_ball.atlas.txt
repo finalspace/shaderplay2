@@ -1,0 +1,41 @@
+
+ddt_map_ch11_beach_ball.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ddt_map_c11_beach_ball1
+  rotate: false
+  xy: 4, 107
+  size: 132, 133
+  orig: 132, 133
+  offset: 0, 0
+  index: -1
+ddt_map_c11_beach_ball2
+  rotate: false
+  xy: 276, 108
+  size: 132, 132
+  orig: 132, 132
+  offset: 0, 0
+  index: -1
+ddt_map_c11_beach_ball3
+  rotate: false
+  xy: 140, 107
+  size: 132, 133
+  orig: 132, 133
+  offset: 0, 0
+  index: -1
+ddt_map_c11_beach_ballhighlight
+  rotate: true
+  xy: 412, 120
+  size: 120, 86
+  orig: 120, 86
+  offset: 0, 0
+  index: -1
+ddt_map_c11_beach_ballshadow
+  rotate: false
+  xy: 4, 4
+  size: 131, 99
+  orig: 131, 99
+  offset: 0, 0
+  index: -1

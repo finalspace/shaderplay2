@@ -88,8 +88,8 @@ Shader "Shader Forge/OnewayRoll" {
                 float faceSign = ( facing >= 0 ? 1 : -1 );
 ////// Lighting:
 ////// Emissive:
-                float4 node_9861 = _Time + _TimeEditor;
-                float2 node_4338 = (i.uv0+node_9861.g*float2(0,0.02));
+                float4 node_7582 = _Time + _TimeEditor;
+                float2 node_4338 = (i.uv0+node_7582.g*float2(0,0.02));
                 float4 _WaveNoise_var = tex2D(_WaveNoise,TRANSFORM_TEX(node_4338, _WaveNoise));
                 float4 node_2983 = _Time + _TimeEditor;
                 float2 node_4641 = ((_NoisePower*(_WaveNoise_var.r*0.04+-0.02))+float2(i.uv0.r,(i.uv0.g+(node_2983.g*_WaveSpeed))));

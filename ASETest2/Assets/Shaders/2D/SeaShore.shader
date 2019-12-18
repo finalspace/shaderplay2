@@ -101,16 +101,16 @@ Shader "Shader Forge/SeaShore" {
                 #endif
                 i.screenPos = float4( i.screenPos.xy / i.screenPos.w, 0, 0 );
                 i.screenPos.y *= _ProjectionParams.x;
-                float4 node_6009 = _Time + _TimeEditor;
-                float2 node_4606 = (i.uv0+node_6009.g*float2(0,0.2));
+                float4 node_3982 = _Time + _TimeEditor;
+                float2 node_4606 = (i.uv0+node_3982.g*float2(0,0.2));
                 float4 _Refraction_var = tex2D(_Refraction,TRANSFORM_TEX(node_4606, _Refraction));
                 float4 node_9013 = _Time + _TimeEditor;
                 float node_6758 = ((_MovementSpeed*node_9013.g)+_Offset);
                 float4 _MainTex_var = tex2D(_MainTex,TRANSFORM_TEX(i.uv0, _MainTex));
                 float node_3154 = (sin(node_6758)*0.5+0.5);
-                float2 node_839 = ((i.uv0+node_6009.g*float2(0.2,0))*0.2);
+                float2 node_839 = ((i.uv0+node_3982.g*float2(0.2,0))*0.2);
                 float4 _WaveNoise1_var = tex2D(_WaveNoise1,TRANSFORM_TEX(node_839, _WaveNoise1));
-                float2 node_9892 = ((i.uv0+node_6009.g*float2(-0.1,0))*0.2);
+                float2 node_9892 = ((i.uv0+node_3982.g*float2(-0.1,0))*0.2);
                 float4 _WaveNoise2_var = tex2D(_WaveNoise2,TRANSFORM_TEX(node_9892, _WaveNoise2));
                 float2 node_8441 = (lerp(i.uv0,(i.uv0+((_NoisePower*(_WaveNoise1_var.g*0.4+-0.2))+(_WaveNoise2_var.g*0.4+-0.2))),_NoiseMovement)+((pow(node_3154,1.4)*0.15+-0.1)*_MovementRange)*float2(0,1));
                 float4 node_1524 = tex2D(_node_6028,TRANSFORM_TEX(node_8441, _node_6028));
