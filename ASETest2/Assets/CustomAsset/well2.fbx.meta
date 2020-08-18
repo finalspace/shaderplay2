@@ -1,32 +1,20 @@
 fileFormatVersion: 2
-guid: 5040b4c4c2f204978a34dd075280e74a
+guid: 7b91dd24f6a9b407e8f81477d9fdb407
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Camera
-    100002: Lamp
-    100004: PalmTreeGradient
-    100006: //RootNode
-    400000: Camera
-    400002: Lamp
-    400004: PalmTreeGradient
-    400006: //RootNode
-    2000000: Camera
-    2300000: PalmTreeGradient
-    3300000: PalmTreeGradient
-    4300000: PalmTreeGradient
-    10800000: Lamp
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: TreeColor
-    second: {fileID: 2100000, guid: 66e35cf4cfb694add866d1508a0ef6d4, type: 2}
+    100000: //RootNode
+    400000: //RootNode
+    2100000: roof
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Plane.003
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -54,10 +42,10 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
-    importVisibility: 0
+    importVisibility: 1
     importBlendShapes: 1
-    importCameras: 0
-    importLights: 0
+    importCameras: 1
+    importLights: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -74,7 +62,7 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
-    tangentImportMode: 0
+    tangentImportMode: 3
     normalCalculationMode: 4
   importAnimation: 1
   copyAvatar: 0
